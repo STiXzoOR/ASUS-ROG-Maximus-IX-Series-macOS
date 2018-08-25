@@ -54,7 +54,7 @@ Once you've selected an SMBIOS that corresponds with your hardware, we are going
 
 It should look like something like this: (The values are **not** supposed to be the same, do not copy these.)
 
-![alt text](Pictures/ROM&MLB.png)
+![alt text](https://raw.githubusercontent.com/camielverdult/Ramblings-of-a-hackintosher-High-Sierra/master/Pictures/ROM%26MLB.png)
 
 Reboot
 

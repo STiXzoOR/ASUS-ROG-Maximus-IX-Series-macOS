@@ -21,6 +21,7 @@
 * [Pre-Install](Pre-Install.md)
 * [Post-Install](Post-Install.md)
 * [iMessage/Facetime](iMessage.md)
+* [Tips](Tips.md)
 * [Troubleshooting](Troubleshooting.md)
 * [Credits/Acknowledgements](Credits.md)
 
