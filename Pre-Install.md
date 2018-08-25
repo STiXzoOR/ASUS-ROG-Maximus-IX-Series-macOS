@@ -24,12 +24,12 @@ Check if you have the full installer, the size should be 4.8GB in total.
 
 Open Terminal and run the following command
 
-##### For Mojave: 
+For Mojave: 
 ```
 sudo "/Applications/Install macOS Mojave Beta.app/Contents/Resources/createinstallmedia" --volume /Volumes/install_osx --nointeraction
 ```
 
-##### For High Sierra: 
+For High Sierra: 
 ```
 sudo "/Applications/Install macOS High Sierra.app/Contents/Resources/createinstallmedia" --volume /Volumes/install_osx --nointeraction
 ```
@@ -43,27 +43,25 @@ Right click (or CMD+click) on the package and click Open, you will get a prompt 
 
 Click Continue, Continue, Agree and Agree. Now, click Customize and select the following:
 
-##### For booting Clover UEFI:
+For booting Clover UEFI:
 ```
 - check "Install for UEFI booting only", "Install Clover in the ESP" will automatically select
-- check "BGM" from Themes
 - check "HFSPlus", "AptioMemoryFix-64" and "EmuVariableUefi-64" from "UEFI Drivers"
 - if you are installing in APFS mode, check "ApfsDriverLoader-64" from "UEFI Drivers"
 - most systems will work without DataHubDxe-64.efi, but some may require it
 ```
 
-##### For booting Legacy:
+For booting Clover Legacy:
 ```
 - check "Install Clover in the ESP"
 - in "Bootloader", check "Install boot0af in MBR" ("Install boot0ss in MBR" for HDD install if dual-boot Windows)
 - "CloverEFI" should be checked
-- check "BGM" from Themes 
 ```
 
 ## Step 3 - Downloading Kexts
 We are now going to install some kernel extensions (often referred to as "kexts") necessary for booting at all. 
 
-##### To start, the developer tools must be installed, if you don't have them already. Run Terminal, and type:
+To start, the developer tools must be installed, if you don't have them already. Run Terminal, and type:
 ```
 git
 ```
@@ -71,7 +69,7 @@ git
 You will be prompted to install the developer tools. Since you have internet working, you can choose to have it download and install them automatically. Do that before continuing.
 After the developer tools are installed, we need to make a copy of the project on github.
 
-##### In Terminal:
+In Terminal:
 ```
 mkdir ~/Projects
 cd ~/Projects
@@ -79,19 +77,19 @@ git clone https://github.com/STiXzoOR/ASUS-ROG-MAXIMUS-IX-Series-macOS asus_rog_
 cd asus_rog_maximus_ix_series.git
 ```
 
-##### To download the kexts & tools, in Terminal:
+To download the kexts & tools, in Terminal:
 ```
 ./wizard.sh --download-requirements
 ```
 
-##### To install kexts to EFI, in Terminal:
+To install kexts to EFI, in Terminal:
 ```
 ./wizard.sh --install-essential-kexts
 ```
 
 ## Step 4 - Pre-configured config.plist
 
-##### To install the pre-configured config.plst to EFI, in Terminal:
+To install the pre-configured config.plst to EFI, in Terminal:
 ```
 ./wizard.sh --install-initial-config
 ```
