@@ -1,7 +1,7 @@
 # Common problems when installing Web Drivers
 
 ## Black screen
-Check out [this](Tips.md#nvidiagraphicsfixup-and-some-smbioses-explained).
+Check out [this](Tips.md#whatevergreen-former-nvidiagraphicsfixup-and-some-smbioses-explained).
 
 ## Nvidia Web drivers not working
 Check if you have NvidiaWeb check in System Parameters. If you do, check out [here](Tips.md#nvidia-web-drivers-not-kicking-in).

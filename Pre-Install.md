@@ -119,7 +119,7 @@ Based on the GPU you’re using, change the following settings:
 - Intel iGPU:
   - Advanced \ System Agent (SA) Configuration \ Graphics Configuration → Primary Display: IGFX
   - Advanced \ System Agent (SA) Configuration \ Graphics Configuration → iGPU Multi-Monitor: Enabled
-  - Advanced \ System Agent (SA) Configuration \ Graphics Configuration → DVMT Pre-Allocated: 128MB/192MB (If you cannot change this, check out the info [here](Tips.md#intelgraphicsdvmtfixup))
+  - Advanced \ System Agent (SA) Configuration \ Graphics Configuration → DVMT Pre-Allocated: 128MB/192MB (If you cannot change this, check out the info [here](Tips.md#whatevergreen-former-intelgraphicsdvmtfixup))
 
 All done! You can now boot into the macOS installer.
 Checkout how to install macOS on a mac [here](https://support.apple.com/en-us/HT204904).
