@@ -7,7 +7,7 @@ downloads=Downloads
 local_kexts_dir=Kexts
 kexts_dir=$downloads/Kexts
 
-kexts_exceptions="Sensors"
+kexts_exceptions=""
 
 tools_dir=$downloads/Tools
 
@@ -36,6 +36,10 @@ function showOptions() {
 
 function findKext() {
     find $kexts_dir $local_kexts_dir -name $1 -not -path \*/PlugIns/* -not -path \*/Debug/*
+}
+
+function removeKext() {
+    sudo rm -Rf /Library/Extensions/$1 /System/Library/Extensions/$1
 }
 
 case "$1" in
@@ -115,6 +119,19 @@ case "$1" in
         rm -Rf $kext_dest/*.kext
         macos-tools/install_kext.sh -s $kext_dest $(findKext FakeSMC.kext) $(findKext IntelMausiEthernet.kext) $(findKext AppleALC.kext) $(findKext WhateverGreen.kext) $(findKext USBInjectAll.kext) $(findKext Lilu.kext) $(findKext XHCI-200-series-injector.kext)
     ;;
+    --remove-installed-kexts)
+        # Remove kexts that have been installed by this script previously
+        for kext in $(macos-tools/installed_kexts.sh); do
+            removeKext $kext
+        done
+    ;;
+    --remove-deprecated-kexts)
+        # Remove deprecated kexts
+        # More info: https://github.com/the-braveknight/macos-tools/blob/master/org.the-braveknight.deprecated.plist
+        for kext in $(macos-tools/deprecated_kexts.sh); do
+            removeKext $kext
+        done
+    ;;
     --update-kernelcache)
         sudo kextcache -i /
     ;;
@@ -149,6 +166,8 @@ case "$1" in
     --install-downloads)
         $0 --install-binaries
         $0 --install-apps
+        $0 --install-nvidia-drivers
+        $0 --remove-deprecated-kexts
         $0 --install-essential-kexts
         $0 --install-kexts
     ;;
