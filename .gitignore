@@ -1,9 +1,8 @@
 .DS_Store
 config_UNMASKED.plist
 Build/*.aml
-Downloads/Kexts
-Downloads/Tools
-Downloads/Drivers
+Kexts/.DS_Store
+Downloads/*
 Hotpatch/Downloads
 macos-tools
 .gitmodules

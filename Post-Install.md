@@ -72,6 +72,7 @@ To install the pre-configured config.plst to EFI, in Terminal:
 
 To install Nvidia Web Drivers, in Terminal:
 ```
+./wizard.sh --download-drivers
 ./wizard.sh --install-nvidia-drivers
 ```
 
