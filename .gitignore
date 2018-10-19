@@ -1,7 +1,8 @@
 .DS_Store
 config_UNMASKED.plist
-Build/*.aml
+Kexts/Lilu*
 Kexts/.DS_Store
+Build/*.aml
 Downloads/*
 Hotpatch/Downloads
 macos-tools
