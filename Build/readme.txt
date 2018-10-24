@@ -1,1 +1,2 @@
-Location for built AML files
+Location for built kexts & AML files.
+

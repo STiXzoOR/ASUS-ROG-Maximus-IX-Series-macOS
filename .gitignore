@@ -1,10 +1,10 @@
 .DS_Store
 config_UNMASKED.plist
-Kexts/Lilu*
 Kexts/.DS_Store
 Build/*.aml
+Build/*.kext
 Downloads/*
-Hotpatch/Downloads
+Hotpatch/Downloads/*
 macos-tools
 .gitmodules
 dev

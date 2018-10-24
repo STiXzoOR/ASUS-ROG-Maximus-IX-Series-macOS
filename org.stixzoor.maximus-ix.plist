@@ -37,5 +37,30 @@
 		<string>libaistat</string>
 		<string>README.md</string>
 	</array>
+	<key>Essentials</key>
+	<dict>
+		<key>Kexts</key>
+		<array>
+			<string>VirtualSMC.kext</string>
+			<string>IntelMausiEthernet.kext</string>
+			<string>Lilu.kext</string>
+			<string>WhateverGreen.kext</string>
+			<string>AppleALC.kext</string>
+			<string>USBInjectAll.kext</string>
+			<string>XHCI-200-series-injector.kext</string>
+		</array>
+	</dict>
+	<key>Deprecated</key>
+	<dict>
+		<key>Kexts</key>
+		<array>
+			<string>FakeSMC.kext</string>
+			<string>FakePCIID.kext</string>
+			<string>FakePCIID_Intel_HD_Graphics.kext</string>
+			<string>FakePCIID_Intel_HDMI_Audio.kext</string>
+			<string>FakePCIID_Broadcom_WiFi.kext</string>
+			<string>IntelGraphicsFixup.kext</string>
+		</array>
+	</dict>
 </dict>
 </plist>

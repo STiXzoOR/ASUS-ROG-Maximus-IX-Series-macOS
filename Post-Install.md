@@ -67,7 +67,14 @@ To install the pre-configured config.plst to EFI, in Terminal:
 ./wizard.sh --install-config
 ```
 
-## Step 4 - Install graphics drivers
+## Step 4 - Custom Theme
+
+To install the custom theme to EFI, in Terminal:
+```
+./wizard.sh --install-theme
+```
+
+## Step 5 - Graphics Drivers
 ### If you're using an AMD GPU you can skip this step.
 
 To install Nvidia Web Drivers, in Terminal:
@@ -78,7 +85,7 @@ To install Nvidia Web Drivers, in Terminal:
 
 If your WebDrivers are not functioning properly (you check this by clicking the NVIDIA driver button in the top bar),you  need to check if your NVRAM is working the way it should be. For more in-depth [click here](Tips,md#nvidia-web-drivers-not-kicking-in).
 
-## Step 5 - ACPI Patches
+## Step 6 - ACPI Patches
 
 ##### To finish the setup, we need a correctly patched ACPI, in Terminal:
 ```
