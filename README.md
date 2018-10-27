@@ -26,4 +26,8 @@
 * [Credits/Acknowledgements](Credits.md)
 
 ### Changelog
-- Initial release
+2018-10-27
+- Updated Credits.
+
+2018-08-26
+- Initial release.

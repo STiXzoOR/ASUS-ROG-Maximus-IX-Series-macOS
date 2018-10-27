@@ -10,8 +10,6 @@ if [[ ! -d $macos_tools ]]; then
 fi
 
 themes_dir=$repo_dir/Themes
-repo_plist=$repo_dir/org.stixzoor.maximus-ix.plist
-config_plist=$repo_dir/config.plist
 config_install_plist=$repo_dir/config_install.plist
 
 source $macos_tools/_hack_cmds.sh
@@ -19,12 +17,11 @@ source $macos_tools/_hack_cmds.sh
 drivers_dir=$downloads_dir/Drivers
 
 case "$1" in
-    --download-drivers)
+    --install-nvidia-drivers)
         rm -Rf $drivers_dir && mkdir -p $drivers_dir
 
-        curl -s https://raw.githubusercontent.com/Benjamin-Dobell/nvidia-update/master/nvidia-update.sh -o $drivers_dir/nvidia-update.sh
-    ;;
-    --install-nvidia-drivers)
+        curl -fsSL https://raw.githubusercontent.com/Benjamin-Dobell/nvidia-update/master/nvidia-update.sh -o $drivers_dir/nvidia-update.sh
+        sudo chmod +x $drivers_dir/nvidia-update.sh
         $drivers_dir/nvidia-update.sh
     ;;
     --install-theme)
