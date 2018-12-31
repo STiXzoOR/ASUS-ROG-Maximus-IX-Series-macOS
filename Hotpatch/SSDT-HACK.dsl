@@ -1,6 +1,6 @@
 // Custom configuration for ASUS ROG Maximus IX series motherboards
 
-DefinitionBlock ("", "SSDT", 2, "hack", "asusrogix", 0)
+DefinitionBlock ("", "SSDT", 2, "hack", "asusrog", 0)
 {
     Device(RMCF)
     {
