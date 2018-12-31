@@ -190,6 +190,7 @@
 		</array>
 		<key>Hotpatch</key>
 		<array>
+			<string>SSDT-HDEF.dsl</string>
 			<string>SSDT-XOSI.dsl</string>
 			<string>SSDT-SATA.dsl</string>
 		</array>
